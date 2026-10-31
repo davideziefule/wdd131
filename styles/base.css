@@ -44,11 +44,17 @@ nav a {
 }
 
 nav a:hover {
+    text-decoration: overline;
     color: var(--accent-color);
 }
 
 main {
-    padding: 1rem 3rem;
+    /* padding: 1rem 3rem; */
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    /* box-sizing: border-box; */
 }
 
 h1 {
@@ -126,4 +132,12 @@ footer {
     color: var(--white);
     text-align: center;
     padding: 1.5rem;
+}
+
+.header-span {
+    display: block;
+}
+
+.active {
+    color: yellow;
 }
