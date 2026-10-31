@@ -57,19 +57,24 @@ h1 {
 }
 
 .content-wrapper {
-    display: flex;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
     gap: 1rem;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
 }
-
+/* 
 .content-wrapper section:first-of-type {
     flex: 2;
 }
 
 .content-wrapper section:last-of-type {
     flex: 1;
+} */
+@media (max-width: 768px) {
+    .content-wrapper {
+        grid-template-columns: 1fr;
+    }
 }
-
 section {
     padding: 1rem;
     border: 1px solid var(--text-color);
