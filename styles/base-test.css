@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: navy;
+    --secondary-color: gray;
+    --accent-color: orange;
+    --bg-color: white;
+    --text-color: rgb(15, 15, 15);
+    --font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    color: #222;
+}
+
+header {
+    background-color: #14213d;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 20px;
+}
+
+#course-title {
+    display: block;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* 4. Navigation links */
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+nav a:hover {
+    background-color: #fca311;
+    color: #14213d;
+    border-radius: 5px;
+}
+
+/* 5. Main content */
+main {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 20px;
+}
+main h1 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* 6. Two-column card layout */
+main>div {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 20px;
+}
+
+/* 7. Individual cards */
+.card {
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px #00000015;
+}
+
+.card h2 {
+    background-color: #14213d;
+    color: white;
+    padding: 10px;
+    margin: -20px -20px 20px;
+    text-align: center;
+}
+
+.card h3 {
+    margin: 20px 0 10px;
+    text-align: center;
+}
+
+.card p {
+    margin-bottom: 15px;
+}
+
+.card img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Center the profile picture */
+.card>img {
+    display: block;
+    width: 180px;
+    margin: 20px auto;
+}
+
+/* Center the flag and its caption */
+.card figure {
+    text-align: center;
+    margin: 15px 0;
+}
+
+.card figure img {
+    width: 150px;
+}
+
+/* Resource list */
+.card ul {
+    padding-left: 25px;
+}
+
+.card li {
+    margin-bottom: 10px;
+}
+
+/* 8. Footer */
+footer {
+    background-color: #14213d;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+/* 9. Responsive layout for small screens */
+@media (max-width: 600px) {
+    nav {
+        flex-direction: column;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    main>div {
+        grid-template-columns: 1fr;
+    }
+}
