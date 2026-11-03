@@ -7,7 +7,6 @@
 :root {
     --primary-color: #000080;
     --accent-color: #ffa500;
-    --bg-color: #ffffff;
     --text-color: #333333;
     --white: #ffffff;
     --black: #000000;
@@ -15,8 +14,8 @@
 }
 
 body {
-    background-color: var(--bg-color);
-    color: var(--text-color);
+    background-color: var(--white);
+    color: var(--black);
     font-family: var(--font-family);
 }
 
@@ -144,4 +143,5 @@ footer {
 
 section ul li a {
     text-decoration: none;
+    color: var(--text-color);
 }
