@@ -31,7 +31,7 @@ header span {
 }
 
 nav {
-    /* background-color: var(--black); */
+    background-color: var(--black);
     display: flex;
     justify-content: space-between;
     padding: 0.5rem 3rem;
@@ -139,5 +139,9 @@ footer {
 }
 
 .active {
-    color: yellow;
+    color: var(--accent-color);
+}
+
+section ul li a {
+    text-decoration: none;
 }
