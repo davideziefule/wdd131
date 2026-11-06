@@ -5,45 +5,46 @@
 }
 
 :root {
-    --primary-color: #000080;
-    --accent-color: #ffa500;
-    --text-color: #333333;
-    --white: #ffffff;
-    --black: #000000;
+    --primary: #000080;
+    --accent: #ffa500;
+    --bg: #ffffff;
+    --text: #333333;
     --font-family: 'Poppins', sans-serif;
 }
 
 body {
-    background-color: var(--white);
-    color: var(--black);
+    background-color: var(--bg);
+    color: var(--text);
     font-family: var(--font-family);
 }
 
 header {
-    background-color: var(--primary-color);
+    background-color: var(--primary);
     text-align: center;
     padding: 1rem 2rem;
 }
 
 header span {
-    color: var(--white);
+    color: var(--bg);
 }
 
 nav {
-    background-color: var(--black);
+    background-color: var(--text);
     display: flex;
     justify-content: space-between;
     padding: 0.5rem 3rem;
 }
 
 nav a {
-    color: var(--white);
+    background-color: var(--text);
+    color: var(--bg);
     margin-left: 1rem;
     text-decoration: none;
 }
 
 nav a:hover {
-    color: var(--accent-color);
+    background-color: var(--accent);
+    color: var(--text);
     text-decoration: overline;
 }
 
@@ -82,7 +83,7 @@ h1 {
 }
 section {
     padding: 1rem;
-    border: 1px solid var(--text-color);
+    border: 1px solid var(--text);
     border-radius: 8px;
     min-width: 0;
 }
@@ -103,8 +104,8 @@ section {
 }
 
 section h2 {
-    background-color: var(--primary-color);
-    color: var(--white);
+    background-color: var(--primary);
+    color: var(--bg);
     margin: -1rem -1rem 1rem -1rem;
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
@@ -127,8 +128,8 @@ ul {
 }
 
 footer {
-    background-color: var(--primary-color);
-    color: var(--white);
+    background-color: var(--primary);
+    color: var(--bg);
     text-align: center;
     padding: 1.5rem;
 }
@@ -137,11 +138,7 @@ footer {
     display: block;
 }
 
-.active {
-    color: var(--accent-color);
-}
-
 section ul li a {
     text-decoration: none;
-    color: var(--text-color);
+    color: var(--text);
 }

@@ -3,19 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Temple</title>
     <meta name="description" content="">
     <meta name="author" content="David Eziefule">
     <title>Temple Album</title>
     <link rel="stylesheet" href="styles/temples.css">
     <link rel="stylesheet" href="styles/temples-large.css">
     <script src="scripts/temples.js" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link 
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet"
+    >
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet"
+    >
 </head>
 <body>
     <header>
-        <p>Temple Album</p>
+        <span>
+            Temple Album
+            <a id="menu" href="#"></a>
+        </span>
         <nav>
-            <ul>
+            <ul class="navigation">
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Old</a></li>
                 <li><a href="#">New</a></li>
@@ -25,52 +39,57 @@
         </nav>
     </header>
     <main>
-        <h1>Beautiful Temples Around the World</h1>        
+        <h1>Beautiful Temples Around the World</h1>   
+        <section class="gallery">
             <figure>
-                <img src="images/temple1.jpg" alt="Salt Lake Temple">
+                <img src="images/salt-lake-temple.jpg" alt="Salt Lake Temple">
                 <figcaption>Salt Lake Temple</figcaption>
             </figure>
         
             <figure>
-                <img src="images/temple2.jpg" alt="Nauvoo Temple">
+                <img src="images/salt-lake-temple.jpg" alt="Nauvoo Temple">
                 <figcaption>Nauvoo Temple</figcaption>
             </figure>
         
             <figure>
-                <img src="images/temple3.jpg" alt="Rome Italy Temple">
+                <img src="images/salt-lake-temple.jpg" alt="Rome Italy Temple">
                 <figcaption>Rome Italy Temple</figcaption>
             </figure>
         
             <figure>
-                <img src="images/temple4.jpg" alt="Paris France Temple">
+                <img src="images/salt-lake-temple.jpg" alt="Paris France Temple">
                 <figcaption>Paris France Temple</figcaption>
             </figure>
         
             <figure>
-                <img src="images/temple5.jpg" alt="London England Temple">
+                <img src="images/salt-lake-temple.jpg" alt="London England Temple">
                 <figcaption>London England Temple</figcaption>
             </figure>
         
             <figure>
-                <img src="images/temple6.jpg" alt="Accra Ghana Temple">
+                <img src="images/salt-lake-temple.jpg" alt="Accra Ghana Temple">
                 <figcaption>Accra Ghana Temple</figcaption>
             </figure>
         
             <figure>
-                <img src="images/temple7.jpg" alt="Lagos Nigeria Temple">
+                <img src="images/salt-lake-temple.jpg" alt="Lagos Nigeria Temple">
                 <figcaption>Lagos Nigeria Temple</figcaption>
             </figure>
         
             <figure>
-                <img src="images/temple8.jpg" alt="Tokyo Japan Temple">
+                <img src="images/salt-lake-temple.jpg" alt="Tokyo Japan Temple">
                 <figcaption>Tokyo Japan Temple</figcaption>
             </figure>
         
             <figure>
-                <img src="images/temple9.jpg" alt="Sydney Australia Temple">
+                <img src="images/salt-lake-temple.jpg" alt="Sydney Australia Temple">
                 <figcaption>Sydney Australia Temple</figcaption>
             </figure>
-        </main>
-    <footer></footer>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; <span id="currentyear"></span> David Chibueze Eziefule | Abuja, Nigeria.</p>
+        <p id="lastModified"></p>
+    </footer>
 </body>
 </html>
