@@ -1,27 +1,52 @@
-/* Large Screen Media Query */
-@media screen and (min-width: 601px) {
+/* ===== Larger View (Tablet & Desktop) ===== */
+@media screen and (min-width: 768px) {
 
-    header {
-        flex-direction: row;
+    /* Hide hamburger button */
+    #menu {
+        display: none;
     }
 
-    nav {
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-end;
-        width: auto;
-    }
-
+    /* Show navigation horizontally */
     .navigation {
         display: flex;
         flex-direction: row;
-        justify-content: flex-end;
-        gap: 20px;
+        position: static;
+        width: auto;
+        background-color: transparent;
+        box-shadow: none;
     }
 
-    .gallery {
+    .navigation a {
+        border-bottom: none;
+        padding: 0.6rem 1.1rem;
+        border-radius: 6px;
+    }
+
+    .navigation a:hover,
+    .navigation a.active {
+        background-color: var(--primary-light);
+    }
+
+    /* Main heading */
+    main>h1 {
+        font-size: 2.3rem;
+        margin-bottom: 2rem;
+    }
+
+    /* Temple Grid - 2 columns */
+    .temple-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.8rem;
+    }
+
+    figure img {
+        height: 240px;
+    }
+}
+
+/* Extra large screens - 3 columns */
+@media screen and (min-width: 1024px) {
+    .temple-grid {
         grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
     }
-
 }

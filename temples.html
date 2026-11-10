@@ -8,42 +8,37 @@
         content="Discover beautiful temples around the world through stunning 
         photographs showcasing historic and modern temples across different countries.">
     <meta name="author" content="David Eziefule">
-    <title>Temple Album</title>
+    <title>Temple Album | WDD 131</title>
+
+    <!-- Mobile-first CSS order -->
     <link rel="stylesheet" href="styles/temples.css">
     <link rel="stylesheet" href="styles/temples-large.css">
+
     <script src="scripts/temples.js" defer></script>
+
+        <!-- Google Fonts (choose 1–2) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link 
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
         rel="stylesheet"
     >
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-        rel="stylesheet"
-    >
 </head>
 <body>
     <header>
-        <span>
-            Temple Album
-            <a id="menu" href="#"></a>
-        </span>
-        <nav>
-            <ul class="navigation">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Old</a></li>
-                <li><a href="#">New</a></li>
-                <li><a href="#">Large</a></li>
-                <li><a href="#">Small</a></li>
-            </ul>
+        <p>Temple Album</p>
+        <button id="menu" aria-label="Open navigation menu"></button>
+        <nav class="navigation">
+            <a href="#" class="active">Home</a>
+            <a href="#">Old</a>
+            <a href="#">New</a>
+            <a href="#">Large</a>
+            <a href="#">Small</a>
         </nav>
     </header>
     <main>
         <h1>Beautiful Temples Around the World</h1>   
-        <section class="gallery">
+        <section class="temple-grid">
             <figure>
                 <img src="images/salt-lake-temple.jpg" alt="Salt Lake Temple">
                 <figcaption>Salt Lake Temple</figcaption>
@@ -92,7 +87,7 @@
     </main>
     <footer>
         <p>&copy; <span id="currentyear"></span> David Chibueze Eziefule | Abuja, Nigeria.</p>
-        <p id="lastModified"></p>
+        <p>Last Modified: <span id="lastModified"></span></p>
     </footer>
 </body>
 </html>
