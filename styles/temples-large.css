@@ -1,4 +1,4 @@
-/* ===== Larger View (Tablet & Desktop) ===== */
+/* ===== Larger Screens ===== */
 @media screen and (min-width: 768px) {
 
     /* Hide hamburger button */
@@ -6,24 +6,26 @@
         display: none;
     }
 
-    /* Show navigation horizontally */
-    .navigation {
+    /* Navigation becomes horizontal */
+    nav {
         display: flex;
+        /* keep flex */
         flex-direction: row;
         position: static;
         width: auto;
         background-color: transparent;
-        box-shadow: none;
     }
 
-    .navigation a {
+    /* Always show the links on large screens */
+    nav a {
+        display: block;
         border-bottom: none;
         padding: 0.6rem 1.1rem;
         border-radius: 6px;
     }
 
-    .navigation a:hover,
-    .navigation a.active {
+    nav a:hover,
+    nav a.active {
         background-color: var(--primary-light);
     }
 
