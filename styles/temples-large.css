@@ -24,7 +24,7 @@
 
     .navigation a:hover,
     .navigation a.active {
-        background-color: var(--accent-color);
+        background-color: var(--primary-light);
     }
 
     /* Main heading */

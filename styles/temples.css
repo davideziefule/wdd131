@@ -16,8 +16,6 @@
     --text: #222222;
     --shadow: rgba(0, 0, 0, 0.1);
     --shadow-hover: rgba(0, 0, 0, 0.15);
-    --primary-color: #2b6cb0;
-    --accent-color: #e53e3e;
 }
 
 /* ===== Base Styles ===== */
@@ -98,7 +96,7 @@ header p {
 
 .navigation a:hover,
 .navigation a.active {
-    background-color: var(--accent-color);
+    background-color: var(--primary-light);
 }
 
 /* ===== Main Content ===== */
