@@ -25,7 +25,7 @@ body {
 /* Header */
 header {
     background: var(--primary-color);
-    color: var(--white);
+    color: var(--bg-color);
     text-align: center;
     padding: 1.5rem;
 }
@@ -46,7 +46,7 @@ main {
 
 /* Sections */
 section {
-    background: var(--white);
+    background: var(--bg-color);
     padding: 1.5rem;
     margin: 1.5rem 0;
     border-radius: 8px;
@@ -81,7 +81,7 @@ li {
 /* Footer */
 footer {
     background: var(--primary-color);
-    color: var(--white);
+    color: var(--bg-color);
     text-align: center;
     padding: 1.5rem;
 }
