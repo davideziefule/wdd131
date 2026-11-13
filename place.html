@@ -1,59 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Madagascar | WDD 131</title>
-    <meta name="description" content="Discover Madagascar, an island nation known for its unique wildlife, beautiful landscapes, tropical climate, and rich cultural heritage.">
-    <meta name="author" content="David C. Eziefule">
-    <meta name="keywords" content="HTML, CSS, JavaScript, Place">
+    <title>Madagascar | Place Page</title>
+    <meta name="description" content="Discover Madagascar - data, weather, and unique wildlife of the island nation.">
+    <meta name="author" content="David Eziefule">
     <link rel="stylesheet" href="styles/place.css">
-    <link rel="stylesheet" href="styles/place-large.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <script src="scripts/place.js" defer></script>
 </head>
+
 <body>
+
     <header>
         <h1>Madagascar</h1>
     </header>
+
     <main>
-        <div class="hero">
+        <section class="hero">
+            <!-- Responsive hero images using srcset (WebP required) -->
             <picture>
-                <source media="(min-width: 1000px)" srcset="images/pincalo-large.webp">
-                <source media="(min-width: 500px)" srcset="images/pincalo-medium.webp">
-                <img src="images/pincalo-small.webp" alt="Aerial view of Madagascar's tropical landscape" width="500" height="250">
+                <source media="(min-width: 900px)" srcset="images/pincalo-large.webp">
+                <img src="images/pincalo-small.webp" alt="Pincalo resting on a branch in Madagascar"
+                    width="800" height="600" class="hero-image">
             </picture>
-        </div>
-        <section>
-            <h2>Data</h2>
-            <ul>
-                <li>Area: 587,041 km²</li>
-                <li>Population: 28,691,018</li>
-                <li>Capital: Antananarivo</li>
-                <li>Official Language: Malagasy, French</li>
-                <li>Currency: Malagasy Ariary</li>
-                <li>Time Zone: UTC+3</li>
-                <li>Calling Code: +261</li>
-                <li>Internet TLD: .mg</li>
-            </ul>
-        </section>
-        <section>
-            <h2>Weather</h2>
-            <img src="images/weather-icon.svg" alt="Weather Icon" width="50" height="50">
-            <ul>
-                <li>Temperature: 25°C (77°F)</li>
-                <li>Conditions: Partly Cloudy</li>
-                <li>Wind Speed: 5 km/h</li>
-                <li>Wind Chill: 9.8°C</li>
-            </ul>
+
+            <div class="cards">
+                <!-- DATA CARD -->
+                <article class="card data-card">
+                    <h2>Data</h2>
+                    <ul>
+                        <li><span>Area:</span> 587,041 sq km</li>
+                        <li><span>Population:</span> 27,691,018</li>
+                        <li><span>Capital:</span> Antananarivo</li>
+                        <li><span>Languages:</span> Malagasy, French</li>
+                        <li><span>Currency:</span> Malagasy Ariary</li>
+                        <li><span>Time Zone:</span> UTC+3</li>
+                        <li><span>Calling Code:</span> +261</li>
+                        <li><span>Internet TLD:</span> .mg</li>
+                    </ul>
+                </article>
+
+                <!-- WEATHER CARD -->
+                <article class="card weather-card">
+                    <h2>Weather</h2>
+
+                    <!-- Mobile weather icon (SVG) -->
+                    <img src="images/weather.svg" alt="Partly cloudy weather icon" class="weather-icon-mobile"
+                        width="64" height="64">
+
+                    <ul>
+                        <li><span>Temperature:</span> 10 °C</li>
+                        <li><span>Conditions:</span> Partly Cloudy</li>
+                        <li><span>Wind:</span> 5 km/h</li>
+                        <li><span>Wind Chill:</span> <span id="wind-chill">Calculating...</span></li>
+                    </ul>
+                </article>
+            </div>
         </section>
     </main>
+
     <footer>
-        <p>&copy; <span id="currentyear"></span> David C. Eziefule</p>
-        <p id="lastModified"></p>
+        <p>&copy; <span id="current-year"></span> 🌸 David Eziefule 🌸 Madagascar</p>
+        <p>Last Modification: <span id="last-modified"></span></p>
     </footer>
+
 </body>
+
 </html>

@@ -1,89 +1,195 @@
-/* General Reset */
+/* ========== CSS VARIABLES ========== */
+:root {
+    --primary: #c8102e;
+    /* Madagascar flag red */
+    --secondary: #007a3d;
+    /* Madagascar flag green */
+    --white: #ffffff;
+    --dark: #1a1a1a;
+    --light-bg: #f7f7f7;
+    --card-bg: rgba(255, 255, 255, 0.94);
+    --shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
+    --radius: 10px;
+    --font-main: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+/* ========== RESET ========== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Root Variables */
-:root {
-    --primary-color: #670b1c;
-    --secondary-color: #00784a;
-    --accent-color: #b1b0ae;
-    --text-color: #030303;
-    --bg-color: #ffffff;
-}
-
-/* Body */
 body {
-    font-family: 'Inter', sans-serif;
-    color: var(--text-color);
+    font-family: var(--font-main);
     line-height: 1.6;
-    background: var(--secondary-color);
+    color: var(--dark);
+    background-color: var(--light-bg);
 }
 
-/* Header */
-header {
-    background: var(--primary-color);
-    color: var(--bg-color);
-    text-align: center;
-    padding: 1.5rem;
-}
-
-/* Main */
-main {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 1rem;
-}
-
-/* Hero Image */
-.hero img {
-    width: 100%;
+img {
+    max-width: 100%;
     height: auto;
     display: block;
 }
 
-/* Sections */
-section {
-    background: var(--bg-color);
-    padding: 1.5rem;
-    margin: 1.5rem 0;
-    border-radius: 8px;
-}
-
-/* Section Headings */
-h2 {
-    margin-bottom: 1rem;
-    color: var(--bg-color);
-    background: var(--secondary-color);
-    padding: 0.5rem;
-}
-
-/* Heading Decoration */
-h2::after {
-    content: "";
-    display: block;
-    width: 60px;
-    height: 3px;
-    background: var(--primary-color);
-    margin-top: 5px;
-}
-
-/* Lists */
 ul {
     list-style: none;
 }
 
-li {
-    padding: 0.5rem 0;
-    border-bottom: 1px solid #ddd;
+/* ========== HEADER ========== */
+header {
+    background-color: var(--primary);
+    color: var(--white);
+    text-align: center;
+    padding: 1.1rem 1rem;
 }
 
-/* Footer */
+header h1 {
+    font-size: 1.9rem;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* ========== HERO ========== */
+.hero {
+    position: relative;
+}
+
+.hero-image {
+    width: 100%;
+    max-height: 420px;
+    object-fit: cover;
+}
+
+/* ========== CARDS (Mobile first) ========== */
+.cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 1.5rem 1rem;
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+.card {
+    background-color: var(--white);
+    border-radius: var(--radius);
+    padding: 1.4rem 1.6rem;
+    box-shadow: var(--shadow);
+}
+
+.card h2 {
+    font-size: 1.35rem;
+    margin-bottom: 1rem;
+    color: var(--dark);
+    border-bottom: 2px solid #e5e5e5;
+    padding-bottom: 0.35rem;
+}
+
+.card li {
+    margin-bottom: 0.5rem;
+    font-size: 0.97rem;
+}
+
+.card li span {
+    font-weight: 600;
+    color: #333;
+    display: inline-block;
+    min-width: 115px;
+}
+
+/* Mobile weather SVG icon */
+.weather-icon-mobile {
+    display: block;
+    margin: 0.6rem auto 1.1rem;
+    width: 64px;
+    height: 64px;
+}
+
+/* ========== FOOTER ========== */
 footer {
-    background: var(--primary-color);
-    color: var(--bg-color);
+    background-color: var(--primary);
+    color: var(--white);
     text-align: center;
-    padding: 1.5rem;
+    padding: 1.3rem 1rem;
+    font-size: 0.92rem;
+    margin-top: 2rem;
+}
+
+footer p {
+    margin: 0.3rem 0;
+}
+
+/* ========== MEDIUM SCREENS ========== */
+@media (min-width: 600px) {
+    header h1 {
+        font-size: 2.2rem;
+    }
+
+    .cards {
+        max-width: 540px;
+        padding: 2rem 1.5rem;
+    }
+}
+
+/* ========== LARGE SCREENS (Laptop / Desktop) ========== */
+@media (min-width: 900px) {
+    header {
+        padding: 1.3rem;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-image {
+        max-height: 580px;
+    }
+
+    /* Cards float over the hero image */
+    .cards {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        max-width: none;
+        margin: 0;
+        padding: 2.8rem 3.5rem;
+        gap: 2rem;
+    }
+
+    .card {
+        width: 290px;
+        background-color: var(--card-bg);
+        backdrop-filter: blur(5px);
+    }
+
+    /* Hide the mobile SVG icon on large screens */
+    .weather-icon-mobile {
+        display: none;
+    }
+
+    /* Pseudo-element weather icon (required) */
+    .weather-card h2::after {
+        content: " ⛅";
+        font-size: 1.6rem;
+    }
+
+    footer {
+        margin-top: 0;
+    }
+}
+
+/* Extra large screens */
+@media (min-width: 1200px) {
+    .cards {
+        padding: 3.2rem 5rem;
+    }
+
+    .card {
+        width: 310px;
+    }
 }
