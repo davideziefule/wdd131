@@ -1,11 +1,3 @@
-:root {
-    --primary-color: #d21033;
-    --secondary-color: #00784a;
-    --accent-color: #f2ede5;
-    --text-color: #030303;
-    --bg-color: #ffffff;
-}
-
 /* General Reset */
 * {
     margin: 0;
@@ -15,10 +7,11 @@
 
 /* Root Variables */
 :root {
-    --primary-color: #00695c;
-    --secondary-color: #f4f4f4;
-    --text-color: #222;
-    --white: #ffffff;
+    --primary-color: #d21033;
+    --secondary-color: #00784a;
+    --accent-color: #f2ede5;
+    --text-color: #030303;
+    --bg-color: #ffffff;
 }
 
 /* Body */
