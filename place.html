@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Singapore | WDD131</title>
+    <meta name="description" content="Singapore is a vibrant city-state in Southeast Asia known for its modern architecture, diverse culture, and delicious cuisine.">
+    <meta name="keywords" content="Singapore, travel, tourism, Southeast Asia, city-state, culture, cuisine">
+    <meta name="author" content="David Eziefule">
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Singapore</h1>
+    </header>
+    <main>
+        <section class="hero">
+            <picture>
+                <!-- Large screens -->
+                <source media="(min-width: 1000px)" srcset="images/place-large.webp" type="image/webp">
+            
+                <!-- Medium screens -->
+                <source media="(min-width: 601px)" srcset="images/place-medium.webp" type="image/webp">
+            
+                <!-- Small screens / fallback -->
+                <source srcset="images/place-small.webp" type="image/webp">
+            
+                <img src="images/place-large.jpg" alt="Beautiful view of Singapore" fetchpriority="high">
+            </picture>
+        </section>
+        <section class="data">
+            <h2>Data</h2>
+            <ul>
+                <li>Area: 736 sq km</li>
+                <li>Population: 6,208,500 (2026 estimate)</li>
+                <li>Capital: Singapore</li>
+                <li>Languages: English, Malay, Mandarin Chinese, Tamil</li>
+                <li>Currency: Singapore Dollar (SGD)</li>
+                <li>Time Zone: Singapore Standard Time (UTC+8)</li>
+                <li>Calling Code: +65</li>
+                <li>Internet TLD: .sg</li>
+            </ul>
+        </section>
+        <section class="weather">
+            <h2><span class="desktop-icon">⛅</span>Weather</h2>
+            <img src="images/weather-icon.svg" alt="Partly cloudy weather icon" class="mobile-icon">
+            <ul>
+                <li>Temperature: 29°C</li>
+                <li>Conditions: Some clouds</li>
+                <li>Wind: Light and variable</li>
+                <li>Wind Chill: <span id="windChill">N/A</span></li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; <span id="currentYear"></span> - David Eziefule - Singapore</p>
+        <p>Last modified Date: <span id="lastModified"></span></p>
+    </footer>
+</body>
+</html>
