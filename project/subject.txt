@@ -1,0 +1,9 @@
+Website Project Subject: Personal Software Developer Portfolio
+
+Description of the Planned Site Content:
+
+The website will show my work history, schooling, tech skills and coding projects. It will have a section, a bit about me, a skills list, a project gallery and ways to get in touch.
+
+Reason for Choosing the Subject:
+
+I picked this topic since I am learning software development and want to work in the tech field. The site will let me show off what I can do and what I have built. It will also help me keep track of how I grow in my career. It gives me a spot online that I can point to when I apply for jobs or take on freelance and remote work.

@@ -1,0 +1,328 @@
+/* ========================================
+   1. CSS RESET AND GLOBAL SETTINGS
+   ======================================== */
+
+/* Makes sizing predictable for all elements.
+   Padding and borders are included in element widths. */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Smooth scrolling when navigating through the page */
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+
+/* ========================================
+   2. CSS VARIABLES / COLOR SCHEMA
+   ======================================== */
+
+/* Centralizes the colors so they can be changed easily */
+:root {
+    --primary-color: #003366;
+    /* Navy blue */
+    --secondary-color: #333333;
+    /* Dark charcoal */
+    --accent-color: #ffbf00;
+    /* Amber */
+    --background-color: #f4f6f9;
+    /* Light gray background */
+    --white: #ffffff;
+    --border-color: #d9dee7;
+
+    --heading-font: "Montserrat", sans-serif;
+    --body-font: "Roboto", sans-serif;
+
+    --content-width: 900px;
+}
+
+/* Base styles for the entire page */
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--secondary-color);
+    background-color: var(--background-color);
+}
+
+/* ========================================
+   3. GENERAL ELEMENT STYLES
+   ======================================== */
+
+/* Default styling for headings */
+h1,
+h2,
+h3 {
+    font-family: var(--heading-font);
+    line-height: 1.3;
+}
+
+/* Paragraph spacing */
+p {
+    margin-bottom: 1rem;
+}
+
+/* Makes images responsive */
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+/* Improves the appearance of lists */
+ul {
+    padding-left: 1.5rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+
+/* ========================================
+   4. HEADER
+   ======================================== */
+
+/* Main page header */
+header {
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 3rem 1rem;
+    border-bottom: 5px solid var(--accent-color);
+}
+
+/* Main heading */
+header h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 0.5rem;
+}
+
+/* Subtitle beneath the heading */
+header p {
+    font-size: 1.1rem;
+    margin-bottom: 0;
+    color: #e0e8f2;
+}
+
+
+/* ========================================
+   5. MAIN CONTENT LAYOUT
+   ======================================== */
+
+/* Centers the content and limits its width */
+main {
+    width: 90%;
+    max-width: var(--content-width);
+    margin: 2rem auto;
+}
+
+/* Styles each content section as a card */
+main section {
+    background-color: var(--white);
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+
+/* ========================================
+   6. SECTION HEADINGS
+   ======================================== */
+
+/* Main section headings */
+main section h2 {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1.2rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 2px solid var(--accent-color);
+}
+
+/* Subheadings inside sections */
+main section h3 {
+    color: var(--secondary-color);
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+}
+
+
+/* ========================================
+   7. SITE NAME AND LOGO SECTION
+   ======================================== */
+
+/* Aligns the logo and site name nicely */
+main section:first-child img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    margin: 0 0 1rem;
+}
+
+/* Adds breathing room to the site description */
+main section:first-child p {
+    margin-top: 1rem;
+}
+
+
+/* ========================================
+   8. SCENARIOS SECTION
+   ======================================== */
+
+/* Styles individual scenarios */
+article {
+    background-color: #f4f6f9;
+    padding: 1.25rem;
+    margin-bottom: 1rem;
+    border-left: 4px solid var(--primary-color);
+    border-radius: 5px;
+}
+
+/* Removes extra space after the last scenario */
+article:last-child {
+    margin-bottom: 0;
+}
+
+/* Scenario descriptions */
+article p {
+    margin-bottom: 0;
+}
+
+
+/* ========================================
+   9. COLOR SCHEMA SECTION
+   ======================================== */
+
+/* Makes the color list easier to read */
+main section ul li {
+    padding: 0.2rem 0;
+}
+
+/* Highlights the color values in the list */
+main section:nth-of-type(4) li {
+    font-weight: 500;
+}
+
+
+/* ========================================
+   10. WIREFRAMES SECTION
+   ======================================== */
+
+/* Adds spacing between wireframe figures */
+figure {
+    margin: 1.5rem 0;
+    text-align: center;
+}
+
+/* Displays wireframe images clearly */
+figure img {
+    width: 100%;
+    max-width: 650px;
+    margin: 0 auto;
+    padding: 0.5rem;
+    background-color: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+}
+
+/* Captions beneath wireframe images */
+figcaption {
+    font-family: var(--heading-font);
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--primary-color);
+    margin-top: 0.75rem;
+}
+
+
+/* ========================================
+   11. FOOTER
+   ======================================== */
+
+/* Footer styling */
+footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    text-align: center;
+    padding: 1.5rem 1rem;
+    border-top: 4px solid var(--accent-color);
+}
+
+/* Footer paragraph */
+footer p {
+    margin-bottom: 0;
+    font-size: 0.9rem;
+}
+
+
+/* ========================================
+   12. RESPONSIVE DESIGN - TABLETS
+   ======================================== */
+
+/* Adjustments for medium-sized screens */
+@media screen and (min-width: 600px) {
+    header {
+        padding: 4rem 2rem;
+    }
+
+    header h1 {
+        font-size: 2.5rem;
+    }
+
+    main {
+        width: 85%;
+    }
+
+    main section {
+        padding: 2.5rem;
+    }
+}
+
+
+/* ========================================
+   13. RESPONSIVE DESIGN - DESKTOP
+   ======================================== */
+
+/* Adjustments for larger screens */
+@media screen and (min-width: 900px) {
+    main {
+        width: 80%;
+    }
+
+    header h1 {
+        font-size: 3rem;
+    }
+
+    main section h2 {
+        font-size: 1.7rem;
+    }
+}
+
+
+/* ========================================
+   14. ACCESSIBILITY AND INTERACTION
+   ======================================== */
+
+/* Makes keyboard focus easier to see if links or buttons are added */
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid var(--accent-color);
+    outline-offset: 4px;
+}
+
+/* Prevents overly large text lines on very wide displays */
+main p {
+    max-width: 75ch;
+}
