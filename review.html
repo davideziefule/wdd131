@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Your product review submission confirmation and completed review count.">
+    <meta name="author" content="David Eziefule">
+    <title>Review Submitted | David Eziefule</title>
+
+    <link rel="stylesheet" href="styles/review.css">
+    <script src="scripts/review.js" defer></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <h1>Product Review</h1>
+    </header>
+
+    <main>
+        <section class="confirmation">
+            <div class="checkmark" aria-hidden="true">✓</div>
+
+            <h2>Thank You!</h2>
+
+            <p class="confirmation-message">
+                Your product review has been submitted successfully.
+                Thank you for taking the time to share your experience.
+            </p>
+
+            <div class="review-count">
+                <p>Total Reviews Completed</p>
+                <span id="reviewCount">0</span>
+            </div>
+
+            <a href="form.html" class="return-button">Write Another Review</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> David Eziefule Dev</p>
+    </footer>
+
+</body>
+
+</html>

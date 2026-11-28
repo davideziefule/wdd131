@@ -1,0 +1,180 @@
+/* =========================
+   RESET
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================
+   VARIABLES
+========================= */
+:root {
+    --primary: #1a365d;
+    --primary-hover: #2b4c7e;
+    --background: #f4f6f8;
+    --surface: #ffffff;
+    --text: #243040;
+    --muted: #4b5563;
+    --success: #216e39;
+    --success-background: #e5f4e9;
+}
+
+/* =========================
+   BASE
+========================= */
+body {
+    font-family: "Inter", sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* =========================
+   HEADER
+========================= */
+header {
+    background-color: var(--primary);
+    color: var(--surface);
+    text-align: center;
+    padding: 1.5rem 1rem;
+}
+
+header h1 {
+    font-size: 1.6rem;
+}
+
+/* =========================
+   MAIN
+========================= */
+main {
+    max-width: 650px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* =========================
+   CONFIRMATION
+========================= */
+.confirmation {
+    background-color: var(--surface);
+    border-radius: 10px;
+    padding: 2rem 1.25rem;
+    text-align: center;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.07);
+}
+
+.checkmark {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 1.2rem;
+    border-radius: 50%;
+    background-color: var(--success-background);
+    color: var(--success);
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.confirmation h2 {
+    color: var(--primary);
+    font-size: 1.8rem;
+    margin-bottom: 0.7rem;
+}
+
+.confirmation-message {
+    color: var(--muted);
+    max-width: 420px;
+    margin: 0 auto;
+}
+
+/* =========================
+   REVIEW COUNT
+========================= */
+.review-count {
+    background-color: var(--background);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin: 2rem 0;
+}
+
+.review-count p {
+    color: var(--text);
+    font-weight: 600;
+}
+
+.review-count span {
+    display: block;
+    color: var(--primary);
+    font-size: 3rem;
+    font-weight: 700;
+    margin-top: 0.4rem;
+}
+
+/* =========================
+   RETURN LINK
+========================= */
+.return-button {
+    display: inline-block;
+    background-color: var(--primary);
+    color: var(--surface);
+    text-decoration: none;
+    padding: 0.9rem 1.5rem;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+}
+
+.return-button:hover {
+    background-color: var(--primary-hover);
+}
+
+.return-button:focus-visible {
+    outline: 3px solid var(--primary);
+    outline-offset: 3px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+    background-color: var(--primary);
+    color: var(--surface);
+    text-align: center;
+    padding: 1.5rem 1rem;
+    margin-top: 2rem;
+}
+
+footer p {
+    font-size: 0.9rem;
+}
+
+/* =========================
+   LARGER SCREENS
+========================= */
+@media screen and (min-width: 600px) {
+    main {
+        margin: 3rem auto;
+    }
+
+    .confirmation {
+        padding: 3rem;
+    }
+}
+
+/* =========================
+   REDUCED MOTION
+========================= */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        transition: none;
+        scroll-behavior: auto;
+    }
+}

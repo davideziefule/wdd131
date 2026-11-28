@@ -1,0 +1,322 @@
+/* =========================
+   RESET
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* =========================
+   VARIABLES
+========================= */
+:root {
+    --primary: #1a365d;
+    --primary-hover: #2b4c7e;
+    --background: #f4f6f8;
+    --surface: #ffffff;
+    --text: #243040;
+    --muted: #4b5563;
+    --border: #d1d9e0;
+    --accent: #654300;
+    --danger: #991b1b;
+    --success: #216e39;
+}
+
+/* =========================
+   BASE
+========================= */
+body {
+    font-family: "Inter", sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+input,
+select,
+textarea,
+button {
+    font: inherit;
+}
+
+/* =========================
+   HEADER
+========================= */
+header {
+    background-color: var(--primary);
+    color: var(--surface);
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.header-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+header h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.4rem;
+}
+
+header p {
+    color: #e0e8f0;
+    font-size: 0.95rem;
+}
+
+/* =========================
+   MAIN
+========================= */
+main {
+    max-width: 650px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* =========================
+   FORM
+========================= */
+form {
+    background-color: var(--surface);
+    padding: 1.25rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.07);
+}
+
+.required-note {
+    font-size: 0.9rem;
+    color: var(--muted);
+    margin-bottom: 1rem;
+}
+
+.required-mark {
+    color: var(--danger);
+    font-weight: 700;
+}
+
+.optional {
+    color: var(--muted);
+    font-size: 0.85rem;
+    font-weight: 400;
+}
+
+.field-description {
+    color: var(--muted);
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+/* =========================
+   FIELDSETS
+========================= */
+.form-section {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.form-section legend {
+    color: var(--primary);
+    font-weight: 700;
+    padding: 0 0.5rem;
+}
+
+/* =========================
+   FORM GROUPS
+========================= */
+.form-group {
+    margin-bottom: 1.2rem;
+}
+
+.form-group:last-child {
+    margin-bottom: 0;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+select,
+input[type="date"],
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    background-color: var(--surface);
+    color: var(--text);
+}
+
+select {
+    cursor: pointer;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* =========================
+   FOCUS
+========================= */
+select:focus,
+input:focus,
+textarea:focus {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+}
+
+/* =========================
+   RATINGS
+========================= */
+.rating-options {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0.5rem;
+}
+
+.rating-option {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.35rem;
+    padding: 0.6rem 0.2rem;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.rating-option:hover {
+    background-color: var(--background);
+}
+
+.rating-option input[type="radio"] {
+    accent-color: var(--primary);
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.stars {
+    color: var(--accent);
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.rating-number {
+    font-size: 0.8rem;
+    color: var(--muted);
+}
+
+/* =========================
+   FEATURES
+========================= */
+.feature-options {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.checkbox-option {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    padding: 0.7rem;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.checkbox-option:hover {
+    background-color: var(--background);
+}
+
+.checkbox-option input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--primary);
+    cursor: pointer;
+}
+
+.checkbox-option span {
+    font-weight: 400;
+}
+
+/* =========================
+   SUBMIT BUTTON
+========================= */
+.submit-button {
+    display: block;
+    width: 100%;
+    border: none;
+    border-radius: 6px;
+    background-color: var(--primary);
+    color: var(--surface);
+    padding: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.submit-button:hover {
+    background-color: var(--primary-hover);
+}
+
+.submit-button:focus-visible {
+    outline: 3px solid var(--primary);
+    outline-offset: 3px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+footer {
+    background-color: var(--primary);
+    color: var(--surface);
+    text-align: center;
+    padding: 1.5rem 1rem;
+    margin-top: 2rem;
+}
+
+footer p {
+    font-size: 0.9rem;
+}
+
+/* =========================
+   LARGER SCREENS
+========================= */
+@media screen and (min-width: 600px) {
+    main {
+        margin: 3rem auto;
+    }
+
+    form {
+        padding: 2rem;
+    }
+
+    .form-section {
+        padding: 1.5rem;
+    }
+}
+
+/* =========================
+   REDUCED MOTION
+========================= */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        transition: none;
+        scroll-behavior: auto;
+    }
+}
