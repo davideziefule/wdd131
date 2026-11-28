@@ -48,11 +48,6 @@ products.forEach(product => {
    SUBMISSION ID
 ========================= */
 const form = document.querySelector("form");
-const submissionIdInput = document.querySelector("#submissionId");
-
-form.addEventListener("submit", () => {
-    submissionIdInput.value = Date.now().toString();
-});
 
 /* =========================
    FOOTER YEAR
